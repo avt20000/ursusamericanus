@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<head>
+  <title>Small Comics</title>
+  <meta name="description" content="my first page" />
+  <meta name="keywords" content="html tutorial template" />
+    <link rel="stylesheet" href="./styles/style.css"/>
+    <link rel="icon" type="image/png" href="./images/favicon.png" />
+    <div class="topnav">
+        <a class="active" href="index.html">home</a>
+        <a href="longercomics.html">big comics</a>
+        <a href="shortercomics.html">small comics</a>
+        <a href="about.html">about</a>
+      </div>
+
+
+
+<body class="bodystyle">
+
+  <p class="headerstyle">one-page comics, strips, and sketches</p>
+    
+    <div class="flex-container"> 
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/inner_conflict.png" alt="inner conflict" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/bang.png" alt="bang! (wish i hadn't seen u!)" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/pigeonwisdom.png" alt="pigeon wisdom 1" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/zine_2.png" alt="tu ne m'aime pas (zine project)" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/zine_1.png" alt="je ne t'aime pas (zine project)" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/burnout.PNG" alt="walking back from class on tuesday" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/fryslan.PNG" alt="on the train" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/oops.png" alt="hindsight is 20/20" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/dumb_joke.PNG" alt="lame joke" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/strand.PNG" alt="at strand" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/dayoff.PNG" alt="my day off" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/earrings.PNG" alt="thinking about my earrings" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/meeting.jpg" alt="meeting" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)" class="myImg cell" src="./images/poppers.jpg" alt="poppers" style="width:100%;max-width:300px">
+    <img onclick="makeBig(this)"  class="myImg cell" src="./images/brits.jpg" alt="first contact" style="width:100%;max-width:300px">
+      </div>
+    
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <span class="close">&times;</span>
+      <img class="modal-content" id="img01">
+      <div id="caption"></div>
+    </div>
+    
+    <script>
+    // Get the modal
+    var modal = document.getElementById("myModal");
+    
+    // Get the image and insert it inside the modal - use its "alt" text as a caption
+   
+    var modalImg = document.getElementById("img01");
+    var captionText = document.getElementById("caption");
+    
+    function makeBig(theimage) {
+      console.log(theimage)
+     
+      modal.style.display = "block";
+      modalImg.src = theimage.src;
+      captionText.innerHTML = theimage.alt;
+    }
+    // Get the <span> element that closes the modal
+    var span = document.getElementsByClassName("close")[0];
+    
+    // When the user clicks on <span> (x), close the modal
+    span.onclick = function() { 
+      modal.style.display = "none";
+    }
+    </script>
+    
+    </body>
+    </html>
+
+
+
